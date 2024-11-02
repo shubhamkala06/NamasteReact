@@ -49,7 +49,7 @@ const RestrauntInfoCard = (prop)=>{
                     <div className="HorizontalBar"></div>
                     <div className="RestrauntDistanceAndCharges">
                         <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/v1648635511/Delivery_fee_new_cjxumu" alt="DISTANCE_FEE_NON_FOOD_LM" ></img>
-                        <p className="DistanceAndChargesInfo">{sla["lastMileTravelString"]} {'fees' in feeDetails ? <span>| &#8377;{feeDetails['fees'][0]["fee"]/100} Delivery fee will apply</span>:<></>}</p>
+                        <p className="DistanceAndChargesInfo">{sla["lastMileTravelString"]} {('fees' in feeDetails) && (feeDetails?.['fees'][0]==='{}')? <span>| &#8377;{feeDetails['fees'][0]["fee"]/100} Delivery fee will apply</span>:<></>}</p>
                     </div>
                 </div>
         </div>

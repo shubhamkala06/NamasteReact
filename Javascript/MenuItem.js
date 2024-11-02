@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { IMG_URL } from "../utils/constants";
-import { MyContext } from "./Context/MyContext";
-import { useContext } from "react";
 
 const MenuItem = (props)=>{
     const {name,ratings,description,imageId,isVeg} = props?.["card"]?.["info"];
-    const {setName} = useContext(MyContext);
+    shortDescription= description.slice(0,100);
+    const [expand,setExpand] = useState(false);
     return (
         <div className="menuItemContainer">
             <div className="itemInfo">
@@ -12,15 +12,24 @@ const MenuItem = (props)=>{
                 <p className="itemHeading">
                     {name}
                 </p>
-
                 <div className="itemCost">
-                    {'offerTags' in props?.["card"]?.["info"]?
-                    <div>
-                        <span className="strikeThroughCost">&#8377; {props?.["card"]?.["info"]?.price/100||props?.["card"]?.["info"]?.defaultPrice/100} </span>
-                        <span className="cost">&#8377; {props?.["card"]?.["info"]?.["finalPrice"]/100}</span>
-                    </div>
-                    :
-                    <span className="cost">&#8377; {props?.["card"]?.["info"]?.["price"]/100||props?.["card"]?.["info"]?.["defaultPrice"]/100}</span>}
+                    {
+                        !('offerTags' in props?.["card"]?.["info"])?
+                        (<span className="cost">&#8377; {props?.["card"]?.["info"]?.["price"]/100||props?.["card"]?.["info"]?.["defaultPrice"]/100}</span>)
+                        :
+                        (
+                            JSON.stringify(props?.["card"]?.["info"]?.['offerTags'][0])==='{}'?
+                            (<div>
+                                <span className="strikeThroughCost">&#8377; {props?.["card"]?.["info"]?.price/100||props?.["card"]?.["info"]?.defaultPrice/100} </span>
+                                <span className="cost">&#8377; {props?.["card"]?.["info"]?.["finalPrice"]/100}</span>
+                            </div>)
+                            :
+                            (<div>
+                                <span className="cost">&#8377; {props?.["card"]?.["info"]?.["price"]/100||props?.["card"]?.["info"]?.["defaultPrice"]/100}</span>
+                                <span className="discountIcon"><i className="ri-price-tag-3-fill"></i></span><span className="discountPrice">{props?.["card"]?.["info"]?.['offerTags'][0]?.['title']} {props?.["card"]?.["info"]?.['offerTags'][0]?.['subTitle']}</span>
+                            </div>)
+                        )
+                    }
                 </div>
 
                 {
@@ -36,20 +45,25 @@ const MenuItem = (props)=>{
                     </div>
                 }
 
-                <div className="ItemDescription">
+                <div className="itemDescription">
                     <p>
-                        {description}
+                        {!expand?
+                            <>
+                                <span>{shortDescription}</span>
+                                <span onClick={()=>{setExpand(true)}}>...read more</span>
+                            </>
+                        :
+                            <span>{description}</span>
+                        }
                     </p>
                 </div>
             </div>
-            <div className="itemImg" onClick={()=>{
-                setName(name);
-            }}>
+            <div className="itemImg">
                 <img src={IMG_URL+imageId}></img>
                 <p>ADD</p>
             </div>
         </div>
-
+        
     );
 };
 

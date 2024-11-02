@@ -5,15 +5,14 @@ import Body from "./Body";
 import RestrauntPage from "./RestrauntPage"
 import About from "./About";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Ability } from "./Context/ContextProvider";
 
 
 const App = ()=>{
     return (
-        <Ability>
+        <>
             <Header/>
             <Outlet/>
-        </Ability>
+        </>
     )
 };
 

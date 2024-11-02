@@ -23,7 +23,7 @@ const Body = ()=>{
     const GoodRated = GoodRatedRestraunt(Card);
 
     if(ResData.length===0){
-        const num = 12;
+        const num = 8;
         return (
         <>
             <div className="ShimmerControls">

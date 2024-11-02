@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import {LOGO_URL} from "../utils/constants";
-import {MyContext} from "./Context/MyContext";
 
 const Header = ()=>{
-    const def = useContext(MyContext);
-    console.log(def);
     return (
         <nav>
             <img src={LOGO_URL}></img>

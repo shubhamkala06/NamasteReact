@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { COORDINATES } from "./constants";
 
-const useRestraunMenu = (resId)=>{
+const useRestrauntMenu = (resId)=>{
     const [res,setRes] = useState(null);
     
     const fetchData = async ()=>{
@@ -17,4 +17,4 @@ const useRestraunMenu = (resId)=>{
     return res;
 }
 
-export default useRestraunMenu;
+export default useRestrauntMenu;
