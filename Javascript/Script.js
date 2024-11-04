@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Nav";
 import Body from "./Body";
-import RestrauntPage from "./RestrauntPage"
+import RestrauntPage from "./Restraunt__Page/RestrauntPage"
 import About from "./About";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 

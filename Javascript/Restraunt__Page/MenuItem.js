@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IMG_URL } from "../utils/constants";
+import { IMG_URL } from "../../utils//constants";
 
 const MenuItem = (props)=>{
     const {name,ratings,description,imageId,isVeg} = props?.["card"]?.["info"];

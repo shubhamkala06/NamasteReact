@@ -1,7 +1,7 @@
 import RestrauntInfoCard from "./RestrauntInfoCard";
 import RestrauntMenuSection from "./RestrauntMenuSection";
-import ShimmerCard from "./ShimmerCard";
-import useRestrauntMenu from "../utils/useRestrauntMenu";
+import ShimmerCard from "../ShimmerCard";
+import useRestrauntMenu from "../../utils/useRestrauntMenu";
 
 const RestrauntPage = ()=>{
     const t = location.pathname.split('-');
