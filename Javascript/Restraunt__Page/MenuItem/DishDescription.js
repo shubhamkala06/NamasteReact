@@ -17,7 +17,7 @@ const DishDescription = (prop)=>{
                     {!expand?
                         <>
                             <span>{description.slice(0,120)}</span>
-                            <span onClick={()=>{setExpand(true)}}>...read more</span>
+                            <span onClick={()=>{setExpand(true)}} className="expand">...read more</span>
                         </>
                     :
                         <span>{description}</span>

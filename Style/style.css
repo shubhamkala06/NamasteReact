@@ -420,8 +420,7 @@ nav>img{
     display: flex;
     border-bottom: 1px solid black;
     gap: 4%;
-    padding: 2% 0px 1% 0px;
-    height: 220px;
+    padding: 3% 0px 5% 0px;
     align-items: center;
 }
 .itemInfo{
@@ -450,9 +449,12 @@ nav>img{
     margin-right: 2px;
 }
 .itemImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: fit-content;
-    height: fit-content;
+    width: 20%;
+    height: 100%;
 }
 .itemImg img{
     height: 160px;
@@ -477,9 +479,6 @@ nav>img{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .addBtn1{
-    position:absolute;
-    top: -50px;
-    left: 15px;
     border-radius: 10px;
     width: 120px;
     height: 38px;
@@ -491,8 +490,10 @@ nav>img{
     color: green;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-
-.itemCategoryContainer>h2:hover,.nestedCategoryContainer>h2:hover,.categoryTitle:hover{
+.expand{
+    color: #1ba672;
+}
+.expand:hover{
     cursor: pointer;
 }
 /* -------------------About Us Page--------------------- */
