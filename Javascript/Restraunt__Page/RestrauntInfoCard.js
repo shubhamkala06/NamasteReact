@@ -43,7 +43,7 @@ const RestrauntInfoCard = (prop)=>{
                                     {areaName}
                                 </p>
                             </div>
-                            <div className="DeliveryTime">{sla?.['slaString'].toLowerCase()}</div>
+                            <div className="DeliveryTime">{sla['slaString']===undefined?<></>:sla?.['slaString'].toLowerCase()}</div>
                         </div>
                     </div>
                     <div className="HorizontalBar"></div>

@@ -449,12 +449,7 @@ nav>img{
     margin-left: 2px;
     margin-right: 2px;
 }
-.itemDescription>p>span:first-child{
-    display: flex;
-    border: 1px solid greenyellow;
-}
 .itemImg {
-
     position: relative;
     width: fit-content;
     height: fit-content;
@@ -464,15 +459,30 @@ nav>img{
     width: 150px;
     border-radius: 10px;
 }
-.itemImg p{
+.addBtn2{
     position: absolute;
     border-radius: 10px;
-    width: 70%;
-    height: 25%;
+    width: 80%;
+    height: 23%;
     left: 50%;
     bottom: -8%;
     transform: translateX(-50%);
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-weight: 900;
+    color: green;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.addBtn1{
+    position:absolute;
+    top: -50px;
+    left: 15px;
+    border-radius: 10px;
+    width: 120px;
+    height: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
