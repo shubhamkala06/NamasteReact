@@ -5,6 +5,7 @@ import Search from "./Search";
 import ActionButtons from "./ActionButtons";
 import { COORDINATES } from "../utils/constants";
 
+console.log("Is this a new branch?");
 const Body = ()=>{
     const [Restraunts,setRestraunts] = useState([]);
     const [ResData,setResData] = useState([]);
