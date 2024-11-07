@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Card = (l)=>{
     const navigate = useNavigate();
-    function toResMenu(e){
+    function toResMenu(){
         const t = l['name'].split(" ").join('-').toLowerCase()+'-'+l['areaName'].split(" ").join('-').toLowerCase()+'-'+l['id'];
         navigate(`/restraunts/${t}`);
     }

@@ -5,14 +5,16 @@ import Body from "./Body";
 import RestrauntPage from "./Restraunt__Page/RestrauntPage"
 import About from "./About";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import Store from "./Redux Store/Store";
 
 
 const App = ()=>{
     return (
-        <>
+        <Provider store={Store}>
             <Header/>
             <Outlet/>
-        </>
+        </Provider>
     )
 };
 
